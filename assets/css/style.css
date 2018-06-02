@@ -32,7 +32,7 @@ body    {
 
 #text   {
     font-size: 12px;
-    padding: 20px;
+    padding: 18px;
 }
 
 #button {
@@ -40,7 +40,7 @@ body    {
     color: #bcac7e;
     border: #bcac7e solid;
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 125px;
 }
 
 #wins currentword guessesremaining lettersguessed {

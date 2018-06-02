@@ -1,118 +1,104 @@
- // declare a variable equal to an array of words for the player to guess //
-
- var movieTitles = 
+//global
+var wordOptions = 
  ["2001","alien","amadeus","cabaret","casablanca","chinatown","gladiator","goodfellas",
  "jaws","rocky","sideways","tron","vertigo"];
 
- console.log(movieTitles);
+ var selectedWord = "";
+ var lettersinWord = [];
+ var numBlanks = 0;
+ var blanksAndSuccesses = [];
+ var wrongLetters = [];
 
- // declare a variable equal to a random selection of a word from the array //
+//functions
+ var winCount = 0;
+ var lossCount = 0;
+ var remainingGuesses = 10;
 
- var randomTitle = movieTitles[Math.floor(Math.random() * movieTitles.length)];
+ //main process
+ function startGame()   {
+     selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+     lettersinWord = selectedWord.split("");
+     numBlanks = lettersinWord.length;
 
- // declare a variable equal to the length of the randomly selected word displayed as blank spaces //
+     remainingGuesses = 10;
+     wrongLetters = [];
+     blanksAndSuccesses = [];
 
- var titleBlanks = [];
- for (var i = 0; i < randomTitle.length; i++)  {
-     titleBlanks[i] = "_";
- }    
-
- // declare a variable equal to the number of unknown letters in the randomly selected word //
-
- var numBlanks = randomTitle.length;
-
- 
-
- // create a while-loop that runs as long as some (> 0) letters in the randomly selected word remain unknown //
-
-
-// tell player to "press any key to get started" //
-
-function startGame()    {
-    document.getElementById("currentword").innerHTML = titleBlanks;
-}
-
-/* if letter entered is in word, replace _ with letter. if not, add letter to "lettersguessed" 
-and reduce "guessesmaining by 1."*/
-
-var guess = titleBlanks.join(" ");
-
-/*
-while (numBlanks > 0)   {
-    document.getElementById("currentword").innerHTML = titleBlanks;
-    
-    (titleBlanks.join(" "));
-    var guess = prompt("Enter a letter or click Cancel to end game.");
-    if (guess === null) {
-        break;
-    }
-        else if (guess.length !== 1)    {
-            alert("Enter a letter.");
-        }
-            else {
-                for (var j = 0; j < randomTitle.length; j++)    {
-                    if (randomTitle[j] === guess)   {
-                        titleBlanks[j] = guess;
-                        numBlanks--;
-                    }
-                }
-            }
-        }
-
-
-var correctLetter = document.getElementById("l3");
-       
-    document.onkeypress = function() {
-        correctLetter.textContent = event.key;
-    };
-
-/*
- while (numBlanks > 0)   {
-     alert(titleBlanks.join(" "));
-     var guess = prompt("Enter a letter or click Cancel to end game.");
-     if (guess === null) {
-         break;
+     for (var i = 0; i < numBlanks; i++) {
+         blanksAndSuccesses.push("_");
      }
-         else if (guess.length !== 1)    {
-             alert("Enter a letter.");
-         }
-             else {
-                 for (var j = 0; j < randomTitle.length; j++)    {
-                     if (randomTitle[j] === guess)   {
-                         titleBlanks[j] = guess;
-                         numBlanks--;
-                     }
-                 }
-             }
-         }
 
-         alert(titleBlanks.join(" "));
-         alert("Congratulations! The title is " + randomTitle + ".");
-         
+     document.getElementById("currentword").innerHTML = blanksAndSuccesses.join(" ");
+     document.getElementById("guessesremaining").innerHTML = remainingGuesses;
+     document.getElementById("wins").innerHTML = winCount;
+     document.getElementById("losses").innerHTML = lossCount;
 
-        console.log(randomTitle);
+console.log(selectedWord);
+console.log(lettersinWord);
+console.log(numBlanks);
+console.log(blanksAndSuccesses);
+     
+ }
 
-        console.log(titleBlanks);
-       
-        console.log(numBlanks);
+function checkLetters(letter)   {
+    var isletterInWord = false;
 
+    for (var i = 0; i < numBlanks; i++) {
+        if (selectedWord[i] == letter)   {
+            isletterInWord = true;
+        }
+    }
 
-        //lowercase to uppercase conversion//
-
-        <!DOCTYPE html>
-<html>
-<body>
-
-<p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
-Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
-
-<script>
-function myFunction() {
-    var x = document.getElementById("fname");
-    x.value = x.value.toUpperCase();
+    if (isletterInWord) {
+        for (var i = 0; i < numBlanks; i++) {
+            if(selectedWord[i] == letter) {
+                blanksAndSuccesses[i] = letter;
+        }
+    }
 }
-</script>
 
-</body>
-</html>
-        */
+else {
+    wrongLetters.push(letter);
+    remainingGuesses--
+    
+}
+}
+
+function roundComplete() {
+    console.log("Wins: " + winCount + " | Losses: " + lossCount + " | Guesses Remaining: " + remainingGuesses);
+
+    document.getElementById("guessesremaining").innerHTML = remainingGuesses;
+    document.getElementById("currentword").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("lettersguessed").innerHTML = wrongLetters.join(" ");
+
+    if (lettersinWord.toString() == blanksAndSuccesses.toString()) {
+        winCount++;
+        alert("You Won!");
+
+        document.getElementById("titlewins").innerHTML = selectedWord;
+        document.getElementById("wins").innerHTML = winCount;
+
+        startGame();
+    }
+
+    else if (remainingGuesses == 0) {
+        lossCount++;
+        alert("You Lost!");
+
+        document.getElementById("losses").innerHTML = lossCount;
+
+        startGame();
+    }
+}
+    
+ startGame();
+
+ document.onkeyup = function(event) {
+     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+     checkLetters(letterGuessed);
+     roundComplete();
+
+     console.log(letterGuessed);
+ }
+
+

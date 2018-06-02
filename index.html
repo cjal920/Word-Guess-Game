@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Word Game</title>
+  <title>Movie Title Guessing Game</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -21,34 +21,85 @@
     <div class="container">
         <div class="row">
             
-            <div class="col-lg-6">
+            <div class="col-lg-3">
             <div id="game">
-            <button onclick="startGame()" id="button">START GAME</button>
-            <div id="text">WINS</div>
-            <span id="wins"></span>
-            <div id="text">CURRENT WORD</div>
+            
+            <div id="text">NOW PLAYING</div>
             <span id="currentword"></span>
+
             <div id="text">NUMBER OF GUESSES REMAINING</div>
             <span id="guessesremaining"></span>
+
             <div id="text">LETTERS ALREADY GUESSED</div>
             <span id="lettersguessed"></span>
+
+            <div id="text">WINS</div>
+            <span id="wins"></span>
+
+            <div id="text">TITLES WON</div>
+            <span id="titlewins"></span>
+
+            <div id="text">LOSSES</div>
+            <span id="losses"></span>
+
             </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-3">
                     <div id="poster"></div>
                     </div>
 
+            <div class="col-lg-6">
+                    <div id="text"></div>
+                    <button onclick="startGame()" id="button">START GAME</button>
+            </div>
         </div>
     </div>
         
     <!--<script type="text/javascript" src="assets/javascript/gameA.js"></script>-->
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="assets/javascript/gameS.js"></script>
 
    
       
 <!--
+
+     <div class="panel panel-default">
+
+       <div class="panel-heading">
+           <h3 class="panel-title">NOW PLAYING</h3>
+       </div>
+
+       <div class="panel-body">
+            <h2 id="wordToGuess"></h2>
+       </div>
+
+   </div>
+
+<div class="panel panel-default">
+   <div class="panel-body">LETTERS ALREADY GUESSED: <span id="numGuesses"></span>
+   </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">LETTERS ALREADY GUESSED: <span id="wrongGuesses"></span>
+    </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-body">NUMBER OF GUESSES REMAINING: <span id="numGuesses"></span>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-body">WINS: <span id="winCounter"></span>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-body">LOSSES: <span id="lossCounter"></span>
+        </div>
+</div>
 
     console.log(randomTitle);
 
