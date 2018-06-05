@@ -8,12 +8,15 @@ body    {
 }
 
 #title {
-    height: 50px;
     margin-top: 20px;
-    border-bottom: #bcac7e 3px solid;
+    margin-bottom: 40px;
+    border-top: #bcac7e 1px solid;
+    border-bottom: #bcac7e 1px solid;
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #poster  {
@@ -21,6 +24,14 @@ body    {
     height: 400px;
     width: 250px;
     border: #bcac7e 3px solid;
+}
+
+#image  {
+    height: 125px;
+    width: 75px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: #bcac7e 2px solid;
 }
 
 #game  {
