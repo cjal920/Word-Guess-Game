@@ -7,7 +7,7 @@ body    {
    /* background: url(assets/images/1282389496372890888hollywood-hi.png) no-repeat; */
 }
 
-#title {
+#oscar {
     margin-top: 20px;
     margin-bottom: 40px;
     border-top: #bcac7e 1px solid;
@@ -34,12 +34,14 @@ body    {
     border: #bcac7e 2px solid;
 }
 
+/*
 #game  {
     margin-top: 10px;
     height: 400px;
     width: 250px;
     border: #bcac7e 3px solid;
 }
+*/
 
 #text   {
     font-size: 12px;
@@ -51,7 +53,7 @@ body    {
     color: #bcac7e;
     border: #bcac7e solid;
     padding: 20px;
-    margin-top: 125px;
+    margin-top: 10px;
 }
 
 #wins currentword guessesremaining lettersguessed {

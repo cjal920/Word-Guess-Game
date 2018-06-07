@@ -1,44 +1,47 @@
-var wordOptions = 
- ["2001","alien","amadeus","cabaret","casablanca","chinatown","gladiator","goodfellas",
- "jaws","rocky","sideways","tron","vertigo"];
+//global variables
+var wordOptions = ["2001","alien","amadeus","cabaret","casablanca","chinatown","gladiator","goodfellas",
+ "jaws","lawrence-of-arabia","rocky","sideways","tron","vertigo"];
+
+ console.log(wordOptions);
 
  var imageOptions = ["assets/images/2001.png","assets/images/alien.png","assets/images/amadeus.png","assets/images/cabaret.png","assets/images/casablanca.png","assets/images/chinatown.png",
- "assets/images/gladiator.png","assets/images/goodfellas.png","assets/images/jaws.png","assets/images/rocky.png","assets/images/sideways.png","assets/images/tron.png","assets/images/vertigo.png"];
+ "assets/images/gladiator.png","assets/images/goodfellas.png","assets/images/jaws.png","assets/images/lawrence-of-arabia.png","assets/images/rocky.png","assets/images/sideways.png","assets/images/tron.png","assets/images/vertigo.png"];
 
- var soundoptions = ["assets/audio/2001.mp3","assets/audio/alien.png","assets/audio/amadeus.png","assets/audio/cabaret.png","assets/audio/casablanca.png","assets/audio/chinatown.png",
- "assets/audio/gladiator.png","assets/audio/goodfellas.png","assets/audio/jaws.png","assets/audio/rocky.png","assets/audio/sideways.png","assets/audio/tron.png","assets/audio/vertigo.png"];
+ var audioOptions = ["assets/audio/2001.mp3","assets/audio/alien.mp3","assets/audio/amadeus.mp3","assets/audio/cabaret.mp3","assets/audio/casablanca.mp3","assets/audio/chinatown.mp3",
+ "assets/audio/gladiator.mp3","assets/audio/goodfellas.mp3","assets/audio/jaws.mp3","assets/images/lawrence-of-arabia.mp3","assets/audio/rocky.mp3","assets/audio/sideways.mp3","assets/audio/tron.mp3","assets/audio/vertigo.mp3"];
 
-
-var randomNumber = 0;
+ var randomNumber = 0;
 
  var selectedWord = "";
  var lettersinWord = [];
  var numBlanks = 0;
- var blanksAndSuccesses = [];
+ var blanksAndFills = [];
  var wrongLetters = [];
 
+ //game counters
  var winCount = 0;
  var lossCount = 0;
- var remainingGuesses = 10;
+ var remainingGuesses = 5;
 
- var selectedImage = ""; 
 
+ //functions
  function startGame()   {
      randomNumber = Math.floor(Math.random() * wordOptions.length);
      selectedWord = wordOptions[randomNumber];
      lettersinWord = selectedWord.split("");
      numBlanks = lettersinWord.length;
+     //selectedWord.replace(/\s/g, "-");
 
-     remainingGuesses = 10;
+//reset
+     remainingGuesses = 5;
      wrongLetters = [];
-     blanksAndSuccesses = [];
+     blanksAndFills = [];
      
-
      for (var i = 0; i < numBlanks; i++) {
-         blanksAndSuccesses.push("_");
+         blanksAndFills.push("_");
      }
 
-     document.getElementById("currentword").innerHTML = blanksAndSuccesses.join(" ");
+     document.getElementById("currentword").innerHTML = blanksAndFills.join(" ");
      document.getElementById("guessesremaining").innerHTML = remainingGuesses;
      document.getElementById("wins").innerHTML = winCount;
      document.getElementById("losses").innerHTML = lossCount;
@@ -46,8 +49,9 @@ var randomNumber = 0;
 console.log(selectedWord);
 console.log(lettersinWord);
 console.log(numBlanks);
-console.log(blanksAndSuccesses);
-console.log(selectedImage);
+console.log(blanksAndFills);
+console.log(wrongLetters);
+
      
  }
  
@@ -64,7 +68,7 @@ function checkLetters(letter)   {
     if (isletterInWord) {
         for (var i = 0; i < numBlanks; i++) {
             if(selectedWord[i] == letter) {
-                blanksAndSuccesses[i] = letter;
+                blanksAndFills[i] = letter;
         }
     }
 }
@@ -77,41 +81,38 @@ else {
 }
 
 function roundComplete() {
-    
+
     document.getElementById("guessesremaining").innerHTML = remainingGuesses;
-    document.getElementById("currentword").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("currentword").innerHTML = blanksAndFills.join(" ");
     document.getElementById("lettersguessed").innerHTML = wrongLetters.join(" ");
     
-    
-
-    if (lettersinWord.toString() == blanksAndSuccesses.toString()) {
+    if (lettersinWord.toString() == blanksAndFills.toString()) {
         winCount++;
 
         selectedImage = imageOptions[randomNumber];
         document.getElementById("image").src = selectedImage;
 
-        document.getElementById("you").innerHTML = "YOU!";
+        selectedAudio = audioOptions[randomNumber];
+        document.getElementById("audio").src = selectedAudio;
+
+        document.getElementById("whom").innerHTML = "YOU!";
 
         var titleWins = selectedWord.toUpperCase();
         document.getElementById("titlewins").innerHTML = titleWins;       
         document.getElementById("wins").innerHTML = winCount;
-       
-       
-        startGame();
+
     }
 
     else if (remainingGuesses == 0) {
         lossCount++;
-        document.getElementById("you").innerHTML = "SOMEONE ELSE!";
+        document.getElementById("whom").innerHTML = "SOMEONE ELSE!";
 
         document.getElementById("losses").innerHTML = lossCount;
-
-        startGame();
     }
+
 }
 
  startGame();
-
  document.onkeyup = function(event) {
      var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
      checkLetters(letterGuessed);
