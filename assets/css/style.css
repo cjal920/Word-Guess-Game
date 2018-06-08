@@ -1,38 +1,49 @@
 body    {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
+    font-family: 'Six Caps', sans-serif;
     background-color: black;
-    color: #bcac7e;
+    color: #776228;
     text-align: center;
    /* background: url(assets/images/1282389496372890888hollywood-hi.png) no-repeat; */
 }
 
+#header    {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-top: #0c20ce 15px dashed;
+    border-bottom: #0c20ce 15px dashed;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    color: #776228;
+    font-size: 120px;
+}
+
+.navbar {
+    border-top: #0c20ce 15px dashed;
+    border-bottom: #0c20ce 15px dashed;
+    color: #776228;
+    font-size: 120px;
+
+}
+
+
 #oscar {
     margin-top: 20px;
     margin-bottom: 40px;
-    border-top: #bcac7e 1px solid;
-    border-bottom: #bcac7e 1px solid;
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Playfair Display', serif;
     font-size: 16px;
 }
 
-#poster  {
+#image {
     margin-top: 10px;
-    height: 400px;
-    width: 250px;
-    border: #bcac7e 3px solid;
+    height: 600px;
+    width: 400px;
+    border: #776228 1px solid;
 }
 
-#image  {
-    height: 125px;
-    width: 75px;
-    margin-left: 20px;
-    margin-top: 10px;
-    border: #bcac7e 2px solid;
-}
+
 
 /*
 #game  {
@@ -43,20 +54,61 @@ body    {
 }
 */
 
-#text   {
-    font-size: 12px;
-    padding: 18px;
+#text    {
+    font-size: 50px;
+    padding: 20px;
 }
 
 #button {
+    font-family: 'Six Caps', sans-serif;
+    font-size: 60px;
     background: black;
-    color: #bcac7e;
-    border: #bcac7e solid;
-    padding: 20px;
-    margin-top: 10px;
+    color: #776228;
+    border: #0c20ce solid;
+    padding: 15px;
+   
 }
 
-#wins currentword guessesremaining lettersguessed {
-    font-size: 12px;
+#title-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #776228;
+}
+
+#winning-title  {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #0c20ce solid;
+}
+
+#letters-to-guess   {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#letters-guessed  {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#guesses-remaining   {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    padding: 20px;
+}
+
+
+
+#wins {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#losses {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
     padding: 20px;
 }

@@ -7,14 +7,80 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Six+Caps" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 </head>
 <body>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="navbar">GUESS THE MOVIE TITLE
+
+                <button onclick="startGame()" id="button">PLAY GAME</button>
+                <div id="title-text">WINNING TITLE :</div><span id="winning-title"></span>
+
+            </div>
+        </div>
+    </div>
+
+<div class"container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <img id="image" src="" alt="">
+        </div>
+
+        <div class="col-md-6">
+
+        <div id="game">
+            
+        <div id="text">LETTERS TO GUESS</div>
+        <span id="letters-to-guess"></span>
+
+        <div id="text">LETTERS GUESSED</div>
+        <span id="letters-guessed"></span>
+
+        <div id="text">GUESSES REMAINING</div>
+        <span id="guesses-remaining"></span>
+
+        <div id="text">OSCARS</div>
+        <span id="wins"></span>
+
+        
+
+        <div id="text">LOSSES</div>
+        <span id="losses"></span>
+
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div id="oscar">AND THE OSCAR GOES TO...<span id="whom"></span></div>
+                <div id="oscar">and the Oscar goes to . . .<span id="whom"></span></div>
                    
                    <audio id="audio" autoplay>
                        <source src="" type="audio/mp3">

@@ -41,8 +41,8 @@ var wordOptions = ["2001","alien","amadeus","cabaret","casablanca","chinatown","
          blanksAndFills.push("_");
      }
 
-     document.getElementById("currentword").innerHTML = blanksAndFills.join(" ");
-     document.getElementById("guessesremaining").innerHTML = remainingGuesses;
+     document.getElementById("letters-to-guess").innerHTML = blanksAndFills.join(" ");
+     document.getElementById("guesses-remaining").innerHTML = remainingGuesses;
      document.getElementById("wins").innerHTML = winCount;
      document.getElementById("losses").innerHTML = lossCount;
 
@@ -82,9 +82,9 @@ else {
 
 function roundComplete() {
 
-    document.getElementById("guessesremaining").innerHTML = remainingGuesses;
-    document.getElementById("currentword").innerHTML = blanksAndFills.join(" ");
-    document.getElementById("lettersguessed").innerHTML = wrongLetters.join(" ");
+    document.getElementById("guesses-remaining").innerHTML = remainingGuesses;
+    document.getElementById("letters-to-guess").innerHTML = blanksAndFills.join(" ");
+    document.getElementById("letters-guessed").innerHTML = wrongLetters.join(" ");
     
     if (lettersinWord.toString() == blanksAndFills.toString()) {
         winCount++;
@@ -98,7 +98,7 @@ function roundComplete() {
         document.getElementById("whom").innerHTML = "YOU!";
 
         var titleWins = selectedWord.toUpperCase();
-        document.getElementById("titlewins").innerHTML = titleWins;       
+        document.getElementById("winning-title").innerHTML = titleWins;       
         document.getElementById("wins").innerHTML = winCount;
 
     }
@@ -119,11 +119,6 @@ function roundComplete() {
      roundComplete();
 
  }
-
-
- console.log("Wins: " + winCount + " | Losses: " + lossCount + " | Guesses Remaining: " + remainingGuesses);
-
-
 
 
 /*
