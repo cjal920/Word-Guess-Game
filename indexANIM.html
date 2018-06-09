@@ -10,8 +10,19 @@
   <link href="https://fonts.googleapis.com/css?family=Six+Caps" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 </head>
+
 <body>
-    <div class="row">
+
+<p>
+<button onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+
+
+<div class="row">
         <div class="col-md-12">
             <div class="navbar">GUESS THE MOVIE TITLE
                 <button onclick="startGame()" id="button">PLAY GAME</button>
@@ -19,27 +30,40 @@
             </div>
         </div>
     </div>
+
 <div class"container">
     <div class="row">
+
         <div class="col-sm-3">
-            <div><img id="image" src="" alt=""></div>
+            <img id="image" src="" alt="">
         </div>
+
         <div class="col-sm-3">
             <div id="result"></div>
-            <div id="text">the Oscar goes to . . .</div>
+            <div id="text">the Oscar goes to . . .
             <div id="whom"></div>
         </div>
+    </div>
+
         <div class="col-sm-3">
+
                 <div id="text">LETTERS TO GUESS</div>
                     <div id="letters-to-guess"></div>
                 <div id="text">LETTERS GUESSED</div>
                     <div id="letters-guessed"></div>
+                
         </div>
+
         <div class="col-sm-3">
-                <div id="text">GUESSES REMAINING<span id="guesses-remaining"></span>
-                <div id="text">OSCARS<span id="wins"></div> 
-                <div id="text">LOSSES<span id="losses"></div>   
+
+                <div id="text">GUESSES REMAINING<span id="guesses-remaining"></div>
+                    
+                <div id="text">OSCARS<span id="wins"></div>
+                    
+                <div id="text">LOSSES<span id="losses"></div>
+                    
         </div>
+        
         </div>
     </div>
 </div>
@@ -47,11 +71,12 @@
 <audio id="audio-yes" autoplay>
         <source src="" type="audio/mp3">
 </audio>
+
 <audio id="audio-no" autoplay>
         <source src="" type="audio/mp3">
 </audio>
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+<script type="text/javascript" src="assets/javascript/gameANIM.js"></script>
 
 </body>
 </html>

@@ -3,7 +3,6 @@ body    {
     background-color: black;
     color: #776228;
     text-align: center;
-   /* background: url(assets/images/1282389496372890888hollywood-hi.png) no-repeat; */
 }
 
 .navbar {
@@ -24,12 +23,6 @@ body    {
     margin-top: 5px;
 }
 
-#winning-title  {
-    font-size: 80px;
-    color: #0c20ce;
-    margin-right: 40px;
-}
-
 #image {
     margin-top: 10px;
     margin-left: 20px;
@@ -43,27 +36,24 @@ body    {
     padding: 20px;
 }
 
-#whom   {
+#whom, 
+#result,
+#winning-title   {
     font-size: 100px;
     padding: 20px;
-    color: #0c20ce;
+    color: #d40415;
 }
 
-
-
-#letters-to-guess   {
+#letters-to-guess,
+#letters-guessed   {
     font-family: 'Playfair Display', serif;
     font-size: 30px;
     padding: 20px;
 }
 
-#letters-guessed  {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    padding: 20px;
-}
-
-#guesses-remaining   {
+#guesses-remaining,
+#wins,
+#losses   {
     font-size: 50px;
     padding: 20px;
     color: #0c20ce;
@@ -71,14 +61,3 @@ body    {
 
 
 
-#wins {
-    font-size: 50px;
-    padding: 20px;
-    color: #0c20ce;
-}
-
-#losses {
-    font-size: 50px;
-    padding: 20px;
-    color: #0c20ce;
-}
