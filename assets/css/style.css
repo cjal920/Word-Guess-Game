@@ -6,80 +6,50 @@ body    {
    /* background: url(assets/images/1282389496372890888hollywood-hi.png) no-repeat; */
 }
 
-#header    {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    border-top: #0c20ce 15px dashed;
-    border-bottom: #0c20ce 15px dashed;
-    padding: 20px 0 30px 0;
-    text-align: center;
-    color: #776228;
-    font-size: 120px;
-}
-
 .navbar {
+    margin-top: 20px;
+    padding-bottom: 15px;
     border-top: #0c20ce 15px dashed;
     border-bottom: #0c20ce 15px dashed;
     color: #776228;
     font-size: 120px;
-
 }
 
+#button {
+    font-size: 60px;
+    background: black;
+    color: #776228;
+    border: #0c20ce solid;
+    padding: 15px;
+    margin-top: 5px;
+}
 
-#oscar {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
+#winning-title  {
+    font-size: 80px;
+    color: #0c20ce;
+    margin-right: 40px;
 }
 
 #image {
     margin-top: 10px;
-    height: 600px;
-    width: 400px;
-    border: #776228 1px solid;
-}
-
-
-
-/*
-#game  {
-    margin-top: 10px;
+    margin-left: 20px;
     height: 400px;
-    width: 250px;
-    border: #bcac7e 3px solid;
+    width: 300px;
+    border: #776228 3px solid;
 }
-*/
 
 #text    {
     font-size: 50px;
     padding: 20px;
 }
 
-#button {
-    font-family: 'Six Caps', sans-serif;
-    font-size: 60px;
-    background: black;
-    color: #776228;
-    border: #0c20ce solid;
-    padding: 15px;
-   
+#whom   {
+    font-size: 100px;
+    padding: 20px;
+    color: #0c20ce;
 }
 
-#title-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    color: #776228;
-}
 
-#winning-title  {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    color: #0c20ce solid;
-}
 
 #letters-to-guess   {
     font-family: 'Playfair Display', serif;
@@ -94,21 +64,21 @@ body    {
 }
 
 #guesses-remaining   {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 50px;
     padding: 20px;
+    color: #0c20ce;
 }
 
 
 
 #wins {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 50px;
     padding: 20px;
+    color: #0c20ce;
 }
 
 #losses {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 50px;
     padding: 20px;
+    color: #0c20ce;
 }

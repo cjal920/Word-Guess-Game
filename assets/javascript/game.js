@@ -13,6 +13,9 @@ var wordOptions = ["2001","alien","amadeus","cabaret","casablanca","chinatown","
  var randomNumber = 0;
 
  var selectedWord = "";
+ var selectedImage = "";
+ var selectedAudio = "";
+
  var lettersinWord = [];
  var numBlanks = 0;
  var blanksAndFills = [];
@@ -21,7 +24,7 @@ var wordOptions = ["2001","alien","amadeus","cabaret","casablanca","chinatown","
  //game counters
  var winCount = 0;
  var lossCount = 0;
- var remainingGuesses = 5;
+ var remainingGuesses = 10;
 
 
  //functions
@@ -33,9 +36,11 @@ var wordOptions = ["2001","alien","amadeus","cabaret","casablanca","chinatown","
      //selectedWord.replace(/\s/g, "-");
 
 //reset
-     remainingGuesses = 5;
+     remainingGuesses = 10;
      wrongLetters = [];
      blanksAndFills = [];
+     selectedImage = "";
+     selectedAudio = "";
      
      for (var i = 0; i < numBlanks; i++) {
          blanksAndFills.push("_");
@@ -108,6 +113,8 @@ function roundComplete() {
         document.getElementById("whom").innerHTML = "SOMEONE ELSE!";
 
         document.getElementById("losses").innerHTML = lossCount;
+
+        
     }
 
 }
