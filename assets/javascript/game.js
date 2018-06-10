@@ -1,11 +1,11 @@
- var wordOptions = ["2001","alien","amadeus","cabaret","casablanca","chinatown","gladiator","goodfellas",
- "jaws","lawrence-of-arabia","rocky","sideways","tron","vertigo"];
+ var wordOptions = ["2001","alien","amadeus","bugsy","cabaret","casablanca","chinatown","dune","gladiator","glory","goodfellas","greenberg","ishtar",
+ "jaws","ran","reds","rocky","sideways","superman","tron","vertigo","whiplash"];
 
- var imageOptions = ["assets/images/2001.png","assets/images/alien.png","assets/images/amadeus.png","assets/images/cabaret.png","assets/images/casablanca.png","assets/images/chinatown.png",
- "assets/images/gladiator.png","assets/images/goodfellas.png","assets/images/jaws.png","assets/images/lawrence-of-arabia.png","assets/images/rocky.png","assets/images/sideways.png","assets/images/tron.png","assets/images/vertigo.png"];
+ var imageOptions = ["assets/images/2001.png","assets/images/alien.png","assets/images/amadeus.png","assets/images/bugsy.jpg","assets/images/cabaret.png","assets/images/casablanca.png","assets/images/chinatown.png","assets/images/dune.jpg",
+ "assets/images/gladiator.png","assets/images/glory.jpg","assets/images/goodfellas.png","assets/images/greenberg.jpg","assets/images/ishtar.jpg","assets/images/jaws.png","assets/images/ran.jpg","assets/images/reds.jpg","assets/images/rocky.png","assets/images/sideways.png","assets/images/superman.jpg","assets/images/tron.png","assets/images/vertigo.png","assets/images/whiplash.jpg"];
 
- var audioOptions = ["assets/audio/2001.mp3","assets/audio/alien.mp3","assets/audio/amadeus.mp3","assets/audio/cabaret.mp3","assets/audio/casablanca.mp3","assets/audio/chinatown.mp3",
- "assets/audio/gladiator.mp3","assets/audio/goodfellas.mp3","assets/audio/jaws.mp3","assets/images/lawrence-of-arabia.mp3","assets/audio/rocky.mp3","assets/audio/sideways.mp3","assets/audio/tron.mp3","assets/audio/vertigo.mp3"];
+ var audioOptions = ["assets/audio/2001.mp3","assets/audio/alien.mp3","assets/audio/amadeus.mp3","assets/audio/bugsy.mp3","assets/audio/cabaret.mp3","assets/audio/casablanca.mp3","assets/audio/chinatown.mp3","assets/audio/dune.mp3",
+ "assets/audio/gladiator.mp3","assets/audio/glory.mp3","assets/audio/goodfellas.mp3","assets/audio/greenberg.mp3","assets/audio/ishtar.mp3","assets/audio/jaws.mp3","assets/audio/ran.mp3","assets/audio/reds.mp3","assets/audio/rocky.mp3","assets/audio/sideways.mp3","assets/audio/superman.mp3","assets/audio/tron.mp3","assets/audio/vertigo.mp3","assets/audio/whiplash.mp3"];
 
  var audioNo = "assets/audio/audio-no.mp3";
 
