@@ -1,5 +1,4 @@
-# Word-Guess-Game
-Word Guess Game - GUESS THE MOVIE TITLE!
+# GUESS THE MOVIE TITLE!
 
 ## TECHNOLOGIES
 
